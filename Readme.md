@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
-* Студент: [Sofya Shakirova](https://up.htmlacademy.ru/htmlcss/32/user/1906051).
-* Наставник: `Неизвестно`.
+* Студент: [Софья Шакирова](https://up.htmlacademy.ru/htmlcss/32/user/1906051).
+* Наставник: [Ярослав Шевцов](https://htmlacademy.ru/profile/redx).
 
 ---
 
