@@ -42,138 +42,96 @@
       </nav>
     </header>
     <main class="main-index">
-      <section class="quadcopter">
-        <h2 class="visually-hidden">Квадрокоптер</h2>
-        <img src="#" alt="Квадрокоптер">
-        <div class="device-navigation">
-          <button class="left-button" type="button">
-            <span class="visually-hidden">Предыдущий товар</span>
+      <div class="device-navigation">
+        <button class="slider-button slider-prev" type="button">
+          <span class="visually-hidden">Предыдущий товар</span>
+        </button>
+        <button class="slider-button slider-next" type="button">
+          <span class="visually-hidden">Следующий товар</span>
+        </button>
+      </div>
+      <ol class="slider-pagination">
+        <li class="slider-pagination-item">
+          <section class="slider-quadcopter">
+            <h2 class="visually-hidden">Квадрокоптер</h2>
+            <img src="#" alt="Квадрокоптер">
+            <p class="device-number">01</p>
+            <p class="device-motto">Порхает как бабочка, жалит как пчела!</p>
+            <p class="device-description">Этот обычный, на первый взгляд, квадрокоптер оснащен
+              мощным лазером, замаскированным под стандартную камеру.</p>
+            <a class="link device-details" href="#">Подробнее</a>
+            <table class="device-table">
+              <tr class="device-table-item">
+                <td class="device-table-key">Дальность полета</td>
+                <td class="device-table-value">800 м</td>
+              </tr>
+              <tr class="device-table-item">
+                <td class="device-table-key">Радиус поражения</td>
+                <td class="device-table-value">50 м</td>
+              </tr>
+            </table>
+          </section>
+        </li>
+        <li class="slider-pagination-item">
+          <section class="slider-fitness-tracker">
+            <h2 class="visually-hidden">Фитнес-браслет</h2>
+            <img src="#" alt="Фитнес-браслет">
+            <p class="device-number">02</p>
+            <p class="device-motto">Худеем правильно!</p>
+            <p class="device-description">Мотивирующие фитнес-браслеты помогут найти в себе силы
+              не пропускать занятия и соблюдать диету.</p>
+            <a class="link device-details" href="#">Подробнее</a>
+            <table class="device-table">
+              <tr class="device-table-item">
+                <td class="device-table-key">Без подзарядки</td>
+                <td class="device-table-value">48 часов</td>
+              </tr>
+            </table>
+          </section>
+        </li>
+        <li class="slider-pagination-item">
+          <section class="monopod">
+            <h2 class="visually-hidden">Селфи-палка</h2>
+            <img src="#" alt="Селфи-палка">
+            <p class="device-number">03</p>
+            <p class="device-motto">Делай селфи, как Бен Стиллер!</p>
+            <p class="device-description">Самая длинная палка для селфи доступна в нашем магазине.
+              Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+            <a class="link device-details" href="#">Подробнее</a>
+            <table class="device-table">
+              <tr class="device-table-item">
+                <td class="device-table-key">Длина палки</td>
+                <td class="device-table-value">8,5 м</td>
+              </tr>
+              <tr class="device-table-item">
+                <td class="device-table-key">Вес палки</td>
+                <td class="device-table-value">5 кг</td>
+              </tr>
+              <tr class="device-table-item">
+                <td class="device-table-key">Материал</td>
+                <td class="device-table-value">Карбон</td>
+              </tr>
+            </table>
+          </section>
+        </li>
+      </ol>
+      <ol class="device-navigation">
+        <li class="device-navigation-item">
+          <button class="device-button-active">
+            <span class="visually-hidden">Первый товар</span>
           </button>
-          <button class="right-button" type="button">
-            <span class="visually-hidden">Следующий товар</span>
+        </li>
+        <li class="device-navigation-item">
+          <button class="device-button">
+            <span class="visually-hidden">Второй товар</span>
           </button>
-        </div>
-        <p class="device-number">01</p>
-        <p class="device-motto">Порхает как бабочка, жалит как пчела!</p>
-        <p class="device-description">Этот обычный, на первый взгляд, квадрокоптер оснащен
-          мощным лазером, замаскированным под стандартную камеру.</p>
-        <a class="link device-details" href="#">Подробнее</a>
-        <table class="device-table">
-          <tr class="device-table-item">
-            <td class="device-table-key">Дальность полета</td>
-            <td class="device-table-value">800 м</td>
-          </tr>
-          <tr class="device-table-item">
-            <td class="device-table-key">Радиус поражения</td>
-            <td class="device-table-value">50 м</td>
-          </tr>
-        </table>
-        <ol class="device-navigation">
-          <li class="device-navigation-item">
-            <button class="device-button-active">
-              <span class="visually-hidden">Первый товар</span>
-            </button>
-          </li>
-          <li class="device-navigation-item">
-            <button class="device-button">
-              <span class="visually-hidden">Второй товар</span>
-            </button>
-          </li>
-          <li class="device-navigation-item">
-            <button class="device-button">
-              <span class="visually-hidden">Третий товар</span>
-            </button>
-          </li>
-        </ol>
-      </section>
-      <section class="fitness-tracker">
-        <h2 class="visually-hidden">Фитнес-браслет</h2>
-        <img src="#" alt="Фитнес-браслет">
-        <div class="device-navigation">
-          <button class="left-button" type="button">
-            <span class="visually-hidden">Предыдущий товар</span>
+        </li>
+        <li class="device-navigation-item">
+          <button class="device-button">
+            <span class="visually-hidden">Третий товар</span>
           </button>
-          <button class="right-button" type="button">
-            <span class="visually-hidden">Следующий товар</span>
-          </button>
-        </div>
-        <p class="device-number">02</p>
-        <p class="device-motto">Худеем правильно!</p>
-        <p class="device-description">Мотивирующие фитнес-браслеты помогут найти в себе силы
-          не пропускать занятия и соблюдать диету.</p>
-        <a class="link device-details" href="#">Подробнее</a>
-        <table class="device-table">
-          <tr class="device-table-item">
-            <td class="device-table-key">Без подзарядки</td>
-            <td class="device-table-value">48 часов</td>
-          </tr>
-        </table>
-        <ol class="device-navigation">
-          <li class="device-navigation-item">
-            <button class="device-button">
-              <span class="visually-hidden">Первый товар</span>
-            </button>
-          </li>
-          <li class="device-navigation-item">
-            <button class="device-button-active">
-              <span class="visually-hidden">Второй товар</span>
-            </button>
-          </li>
-          <li class="device-navigation-item">
-            <button class="device-button">
-              <span class="visually-hidden">Третий товар</span>
-            </button>
-          </li>
-        </ol>
-      </section>
-      <section class="monopod">
-        <h2 class="visually-hidden">Селфи-палка</h2>
-        <img src="#" alt="Селфи-палка">
-        <div class="device-navigation">
-          <button class="left-button" type="button">
-            <span class="visually-hidden">Предыдущий товар</span>
-          </button>
-          <button class="right-button" type="button">
-            <span class="visually-hidden">Следующий товар</span>
-          </button>
-        </div>
-        <p class="device-number">03</p>
-        <p class="device-motto">Делай селфи, как Бен Стиллер!</p>
-        <p class="device-description">Самая длинная палка для селфи доступна в нашем магазине.
-          Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-        <a class="link device-details" href="#">Подробнее</a>
-        <table class="device-table">
-          <tr class="device-table-item">
-            <td class="device-table-key">Длина палки</td>
-            <td class="device-table-value">8,5 м</td>
-          </tr>
-          <tr class="device-table-item">
-            <td class="device-table-key">Вес палки</td>
-            <td class="device-table-value">5 кг</td>
-          </tr>
-          <tr class="device-table-item">
-            <td class="device-table-key">Материал</td>
-            <td class="device-table-value">Карбон</td>
-          </tr>
-        </table>
-        <ol class="device-navigation">
-          <li class="device-navigation-item">
-            <button class="device-button">
-              <span class="visually-hidden">Первый товар</span>
-            </button>
-          </li>
-          <li class="device-navigation-item">
-            <button class="device-button">
-              <span class="visually-hidden">Второй товар</span>
-            </button>
-          </li>
-          <li class="device-navigation-item">
-            <button class="device-button-active">
-              <span class="visually-hidden">Третий товар</span>
-            </button>
-          </li>
-        </ol>
-      </section>
+        </li>
+      </ol>
       <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="catalog-list">
