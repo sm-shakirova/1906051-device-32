@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 <header class="page-header">
   <h1 class="visually-hidden">Каталог товаров интернет-магазина "Девайс"</h1>
-  <form>
-    <input type="search" name="page-search" id="search-field" value="Поиск по сайту">
-  </form>
-  <nav class="page-navigation">
+  <nav class="navigation">
+    <form class="search">
+      <input type="search" name="page-search" id="search-field" value="Поиск по сайту">
+    </form>
     <a class="navigation-logo" href="index.html">
-      <img class="logo" src="#" alt='Логотип интернет-магазина "Девайс"'>
+      <img class="logo-header" src="img/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
     </a>
     <ul class="navigation-catalog">
       <li class="navigation-item">
@@ -20,14 +21,14 @@
       </li>
     </ul>
     <ul class="navigation-user">
-      <li class="navigation-item">
-        <a class="navigation-link" href="#">Войти</a>
+      <li class="navigation-user-item">
+        <a class="navigation-user-link" href="#">Войти</a>
       </li>
-      <li class="navigation-item">
-        <a class="navigation-link" href="#">Сравнить</a>
+      <li class="navigation-user-item">
+        <a class="navigation-user-link" href="#">Сравнить</a>
       </li>
-      <li class="navigation-item">
-        <a class="navigation-link" href="#">Корзина</a>
+      <li class="navigation-user-item">
+        <a class="navigation-user-link" href="#">Корзина</a>
       </li>
     </ul>
     <ul class="navigation-services">
@@ -128,7 +129,7 @@
           </li>
         </ul>
       </fieldset>
-      <button class="filters-button" type="submit">Показать</button>
+      <button class="yellow-button filters-button" type="submit">Показать</button>
     </form>
   </section>
   <section class="catalog-products">
@@ -147,40 +148,40 @@
     </div>
     <ul class="devices-list">
       <li class="device-card">
-        <a href="#" class="visually-hidden device-card-new">New</a>
+        <span class="device-card-new">New</span>
         <a class="device-card-link" href="#">
-          <img class="device-card-image" src="#" alt="Тонкая черная селфи-палка">
+          <img class="device-card-image" src="img/catalog/device-1.jpg" width="360" height="380" alt="Тонкая черная селфи-палка">
           <h3 class="device-card-title">Любительская селфи-палка</h3>
         </a>
         <b class="device-card-price">500 ₽</b>
-        <a href="#" class="device-card-button">Подробнее</a>
+        <a class="yellow-button device-card-button" href="#">Подробнее</a>
       </li>
       <li class="device-card">
-        <a href="#" class="visually-hidden device-card-new">New</a>
+        <span class="device-card-new">New</span>
         <a class="device-card-link" href="#">
-          <img class="device-card-image" src="#" alt="Прочная черная селфи-палка">
+          <img class="device-card-image" src="img/catalog/device-2.jpg" width="360" height="380" alt="Прочная черная селфи-палка">
           <h3 class="device-card-title">Профессиональная селфи-палка</h3>
         </a>
         <b class="device-card-price">1500 ₽</b>
-        <a href="#" class="device-card-button">Подробнее</a>
+        <a class="yellow-button device-card-button" href="#" >Подробнее</a>
       </li>
       <li class="device-card">
-        <a href="#" class="visually-hidden device-card-new">New</a>
+        <span class="device-card-new">New</span>
         <a class="device-card-link" href="#">
-          <img class="device-card-image" src="#" alt="Водонепроницаемая селфи-палка">
+          <img class="device-card-image" src="img/catalog/device-3.jpg" width="360" height="380" alt="Водонепроницаемая селфи-палка">
           <h3 class="device-card-title">Непотопляемая селфи-палка</h3>
         </a>
         <b class="device-card-price">2500 ₽</b>
-        <a href="#" class="device-card-button">Подробнее</a>
+        <a class="yellow-button device-card-button" href="#">Подробнее</a>
       </li>
       <li class="device-card">
-        <a href="#" class="device-card-new">New</a>
+        <span class="device-card-new">New</span>
         <a class="device-card-link" href="#">
-          <img class="device-card-image" src="#" alt="Cелфи-палка в виде руки">
+          <img class="device-card-image" src="img/catalog/device-4.jpg" width="360" height="380" alt="Cелфи-палка в виде руки">
           <h3 class="device-card-title">Селфи-палка «Следуй за мной»</h3>
         </a>
         <b class="device-card-price">4900 ₽</b>
-        <a href="#" class="device-card-button">Подробнее</a>
+        <a class="yellow-button device-card-button" href="#" >Подробнее</a>
       </li>
     </ul>
     <button class="pagination-show-more" type="button">Загрузить еще</button>
@@ -210,13 +211,14 @@
   </section>
 </main>
 <footer class="page-footer">
-  <img class="logo" src="#" alt='Логотип интернет-магазина "Девайс"'>
-  <address class="contacts-address">
-    <p class="contacts-address-text">Санкт-Петербург, набережная<br>
+  <img class="logo-footer" src="img/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
+  <h2 class="visually-hidden">Контакты</h2>
+  <address class="contacts-footer">
+    <p class="contacts-footer-address">Санкт-Петербург, набережная<br>
       реки Карповки, 5, литера П.</p>
-    <a class="contacts-phone" href="tel:88121212">Тел.: +7 (812) 812-12-12</a>
+    <a class="contacts-footer-phone" href="tel:88121212">Тел.: +7 (812) 812-12-12</a>
   </address>
-  <nav class="page-navigation">
+  <nav class="navigation-footer">
     <ul class="navigation-info">
       <li class="navigation-item">
         <a class="navigation-link" href="#">Доставка</a>
@@ -231,17 +233,17 @@
   </nav>
   <ul class="social-media-links">
     <li class="social-media-item">
-      <a class="facebook-link" href="https://www.facebook.com/htmlacademy">
+      <a class="social-media-link" href="https://www.facebook.com/htmlacademy">
         <span class="visually-hidden">Фейсбук</span>
       </a>
     </li>
     <li class="social-media-item">
-      <a class="instagram-link" href="https://www.instagram.com/htmlacademy/">
+      <a class="social-media-link" href="https://www.instagram.com/htmlacademy/">
         <span class="visually-hidden">Инстаграм</span>
       </a>
     </li>
     <li class="social-media-item">
-      <a class="twitter-link" href="https://www.twitter.com/htmlacademy_ru">
+      <a class="social-media-link" href="https://www.twitter.com/htmlacademy_ru">
         <span class="visually-hidden">Твиттер</span>
       </a>
     </li>
