@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
@@ -46,7 +46,7 @@
 </header>
 <main class="main-inner">
   <header class="inner-header">
-    <h2 class="inner-header-title">Моноподы для селфи</h2>
+    <h2 class="section-title">Моноподы для селфи</h2>
     <ul class="breadcrumbs">
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -59,8 +59,10 @@
       </li>
     </ul>
   </header>
-  <section class="filters">
-    <h3 class="filters-title">Фильтр:</h3>
+  <section class="filters-block">
+    <div class="filters-title-container">
+      <h3 class="filters-title">Фильтр:</h3>
+    </div>
     <form class="filters-form" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="filters-group">
         <legend class="filters-group-title">Стоимость</legend>
@@ -146,7 +148,7 @@
       <a href="#" class="sorting-type-button"><span class="visually-hidden">От меньшего к большему</span></a>
       <a href="#" class="sorting-type-button"><span class="visually-hidden">От большего к меньшему</span></a>
     </div>
-    <ul class="devices-list">
+    <ol class="devices-list">
       <li class="device-card">
         <span class="device-card-new">New</span>
         <a class="device-card-link" href="#">
@@ -183,11 +185,11 @@
         <b class="device-card-price">4900 ₽</b>
         <a class="yellow-button device-card-button" href="#" >Подробнее</a>
       </li>
-    </ul>
-    <button class="pagination-show-more" type="button">Загрузить еще</button>
+    </ol>
+    <button class="show-more-button" type="button">Загрузить еще</button>
     <ul class="pagination">
       <li class="pagination-item">
-        <a class="pagination-link pagination-prev">Назад</a>
+        <a class="pagination-prev">Назад</a>
       </li>
       <li class="pagination-item">
         <a class="pagination-link" href="#">1</a>
@@ -205,7 +207,7 @@
         <a class="pagination-link" href="#">15</a>
       </li>
       <li class="pagination-item">
-        <a class="pagination-link pagination-next" href="#">Вперёд</a>
+        <a class="pagination-next" href="#">Вперёд</a>
       </li>
     </ul>
   </section>
