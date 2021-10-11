@@ -30,12 +30,24 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
   background-color: #FFFFFF;
   color: #000000;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 p {
@@ -63,9 +75,37 @@ p {
 /* Шапка сайта */
 .page-header {
   background-color: #FFE17F;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 /* Навигация */
+.navigation {
+  display: flex;
+  width: 1040px;
+  margin: 0 auto;
+  padding: 0 60px;
+  justify-content: space-between;
+}
+
+.navigation-container:first-child {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+}
+
+.navigation-container:last-child {
+  display: flex;
+  width: 550px;
+  flex-direction: column;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .navigation-link {
   font-family: "Raleway", sans-serif;
   line-height: 21px;
@@ -88,6 +128,11 @@ p {
   text-decoration: none;
 }
 
+.navigation-tabs {
+  margin: 0;
+  padding: 0;
+}
+
 /* Хлебные крошки */
 .breadcrumbs-link {
   font-size: 16px;
@@ -97,6 +142,25 @@ p {
 }
 
 /* Слайдер */
+.device-examples {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.slider-pagination {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-item{
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-container {
+  width: 560px;
+}
+
 .device-number {
   font-weight: 800;
   color: #FFFFFF;
@@ -112,30 +176,105 @@ p {
 .device-table-value {
   font-size: 36px;
 }
+/* Меню каталога с иконками */
+.catalog {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.catalog-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.catalog-item {
+  width: 160px;
+}
 
 /* Услуги */
 .services {
   background-color: #F0F0F0;
 }
 
-/* Доставка редких товаров */
-.special-delivery {
-  background-color: #F0F0F0;
+.tabs-container {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
+.navigation-tabs:first-child {
+  width: 280px;
+  list-style-type: none;
+}
+
+.navigation-tabs:last-child {
+  width: 760px;
+  list-style-type: none;
+}
+
+/* Доставка редких товаров */
 .special-delivery-link {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   line-height: 23px;
-  text-align: center;
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+.special-delivery-icon {
+  background-color: #FFE17F;
+  width: 125px;
+}
+
+.special-delivery-text {
+  background-color: #F0F0F0;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.special-delivery-info {
+  background-color: #F0F0F0;
+  width: 125px;
+}
+
+/* Контакты*/
+.contacts {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.contacts-container {
+  width: 560px;
 }
 
 /* Рассылка */
 .mailing {
   background-color: #F0F0F0;
+}
+
+.mailing-container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.mailing-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mailing-text {
+  width: 560px;
 }
 
 /* О нас */
