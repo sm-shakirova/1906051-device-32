@@ -134,6 +134,11 @@ p {
 }
 
 /* Хлебные крошки */
+.inner-header {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 19px;
@@ -304,6 +309,36 @@ p {
 }
 
 /* Блок фильтров */
+.inner-container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.filters-block {
+  width: 200px;
+  padding-right: 70px;
+}
+
+.catalog-products {
+  width: 760px;
+  padding-left: 70px;
+}
+
+.sorting-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.devices-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 .filters-block, .sorting-block {
   background-color: #EBEBEB;
 }
@@ -329,6 +364,10 @@ p {
 }
 
 /* Карточка товара */
+.device-card {
+  width: 360px;
+}
+
 .device-card-link {
   line-height: 24px;
   font-weight: 700;
@@ -350,10 +389,22 @@ p {
   line-height: 19px;
   text-transform: uppercase;
   text-align: center;
+  width: 760px;
 }
 
 .pagination {
   background-color: #EBEBEB;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 170px;
 }
 
 .pagination-link {
@@ -368,6 +419,7 @@ p {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 19px;
+  width: 90px;
 }
 
 .pagination-next {
@@ -378,12 +430,24 @@ p {
   text-decoration: none;
   color: inherit;
   text-align: right;
+  width: 90px;
 }
 
 /* Подвал сайта */
 .page-footer {
   color: #FFFFFF;
   background-color: #444444;
+}
+
+.footer-container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.footer-block:nth-child(2) {
+  flex-grow: 1;
 }
 
 .contacts-footer-address {
@@ -403,4 +467,14 @@ p {
 
 .navigation-footer {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-media {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
