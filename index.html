@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header container">
       <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
       <nav class="navigation">
         <div class="navigation-container">
@@ -14,14 +14,14 @@
           <form class="search">
             <input type="search" name="page-search" id="search-field" value="Поиск по сайту">
           </form>
-          <ul class="navigation-list navigation-catalog">
+          <ul class="navigation-catalog list">
             <li class="navigation-item">
               <button class="catalog-button" type="button">Каталог товаров</button>
             </li>
           </ul>
         </div>
         <div class="navigation-container">
-          <ul class="navigation-list navigation-user">
+          <ul class="navigation-user list">
             <li class="navigation-user-item">
               <a class="navigation-user-link" href="#">Войти</a>
             </li>
@@ -32,7 +32,7 @@
               <a class="navigation-user-link" href="#">Корзина</a>
             </li>
           </ul>
-          <ul class="navigation-list navigation-services">
+          <ul class="navigation-services list">
             <li class="navigation-item">
               <a class="navigation-link" href="#">Доставка</a>
             </li>
@@ -47,7 +47,7 @@
       </nav>
     </header>
     <main class="main-container main-index">
-      <section class="device-examples">
+      <section class="device-examples container">
         <h2 class="visually-hidden">Примеры товаров</h2>
         <div class="device-navigation">
           <button class="slider-button slider-prev" type="button">
@@ -57,7 +57,7 @@
             <span class="visually-hidden">Следующий товар</span>
           </button>
         </div>
-        <ol class="slider-pagination">
+        <ol class="slider-pagination list">
           <li class="slider-item">
             <div class="slider-container">
               <h3 class="visually-hidden">Квадрокоптер</h3>
@@ -146,9 +146,9 @@
           </li>
         </ol>
       </section>
-      <section class="catalog">
+      <section class="catalog container">
         <h2 class="visually-hidden">Каталог товаров</h2>
-        <ul class="catalog-list">
+        <ul class="catalog-list list">
           <li class="catalog-item">
             <a class="catalog-link" href="catalog.html">Виртуальная реальность</a>
           </li>
@@ -171,8 +171,8 @@
       </section>
       <section class="services">
         <h2 class="visually-hidden">Услуги</h2>
-        <div class="tabs-container">
-          <ol class="navigation-tabs">
+        <div class="tabs-container container">
+          <ol class="navigation-tabs list">
             <li class="navigation-item">
               <a class="yellow-button" href="#">Доставка</a>
             </li>
@@ -183,7 +183,7 @@
               <a class="yellow-button" href="#">Кредит</a>
             </li>
           </ol>
-          <ol class="navigation-tabs">
+          <ol class="navigation-tabs list">
             <li>
               <h3 class="section-title">Доставка</h3>
               <p class="tab-text">Мы с удовольствием доставим ваш товар прямо
@@ -205,13 +205,13 @@
           </ol>
         </div>
       </section>
-      <a class="special-delivery-link" href="#">
+      <a class="special-delivery-link container" href="#">
         <svg class="special-delivery-icon" width="125" height="100"></svg>
         <div class="special-delivery-text">Доставим редкий товар под заказ</div>
         <svg class="special-delivery-info" width="125" height="100"></svg>
       </a>
-      <section class="contacts">
-        <div class="contacts-container">
+      <section class="contacts container">
+        <div class="contacts-block">
           <h2 class="section-title">О нас</h2>
           <p class="about-us-text">
             Огромный выбор гаджетов не оставит равнодушным
@@ -228,7 +228,7 @@
           </ul>
           <a class="yellow-button more-about-us" href="#">Подробнее о нас</a>
         </div>
-        <div class="contacts-container">
+        <div class="contacts-block">
           <h2 class="section-title">Контакты</h2>
           <p class="contacts-text">
             Вы можете забрать товар сами, заехав в наш офис.
@@ -250,7 +250,7 @@
       </section>
       <section class="mailing">
         <h2 class="visually-hidden">Рассылка</h2>
-        <div class="mailing-container">
+        <div class="mailing-container container">
           <div class="mailing-block">
             <p class="section-title mailing-text">Подпишитесь на рассылку</p>
             <p class="mailing-text">Еженедельный дайджест с обзорами новинок,
@@ -267,7 +267,7 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="footer-container">
+      <div class="footer-container container">
         <div class="footer-block">
           <img class="logo-footer" src="img/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
           <address class="contacts-footer">
@@ -276,7 +276,7 @@
           </address>
         </div>
         <div class="footer-block">
-          <ul class="navigation-footer">
+          <ul class="navigation-footer list">
             <li class="navigation-item">
               <a class="navigation-link" href="#">Доставка</a>
             </li>
@@ -287,7 +287,7 @@
               <a class="navigation-link" href="#">Контакты</a>
             </li>
           </ul>
-          <ul class="social-media">
+          <ul class="navigation-footer list">
             <li class="social-media-item">
               <a class="social-media-link" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Фейсбук</span>
