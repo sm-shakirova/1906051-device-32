@@ -10,20 +10,21 @@
   <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
   <nav class="navigation">
     <div class="navigation-container">
-      <img class="logo-header" src="img/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
-      <form class="search">
-        <input type="search" name="page-search" id="search-field" value="Поиск по сайту">
-      </form>
-      <ul class="navigation-catalog list">
-        <li class="navigation-item">
-          <button class="catalog-button" type="button">Каталог товаров</button>
-        </li>
-      </ul>
+      <a class="logo-link" href="index.html">
+        <img class="logo-header" src="img/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
+      </a>
     </div>
     <div class="navigation-container">
+      <form class="search">
+        <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+        <input class="search" id="search-field" type="search" name="page-search" value="Поиск по сайту">
+      </form>
       <ul class="navigation-user list">
         <li class="navigation-user-item">
-          <a class="navigation-user-link" href="#">Войти</a>
+          <a class="navigation-user-link" href="#">
+            <span class="user-name">Коля Петухов</span>
+            <span class="logout">Выйти</span>
+          </a>
         </li>
         <li class="navigation-user-item">
           <a class="navigation-user-link" href="#">Сравнить</a>
@@ -31,6 +32,20 @@
         <li class="navigation-user-item">
           <a class="navigation-user-link" href="#">Корзина</a>
         </li>
+      </ul>
+    </div>
+    <div class="navigation-container">
+      <button class="catalog-button" type="button">
+        <span class="navigation-link">Каталог товаров</span>
+        <span class="visually-hidden">Показать</span>
+      </button>
+      <ul class="navigation-catalog list visually-hidden">
+        <li class="navigation-item">Виртуальная реальность</li>
+        <li class="navigation-item">Моноподы для селфи</li>
+        <li class="navigation-item">Экшн-камеры</li>
+        <li class="navigation-item">Фитнес-браслеты</li>
+        <li class="navigation-item">Умные часы</li>
+        <li class="navigation-item">Квадрокоптеры</li>
       </ul>
       <ul class="navigation-services list">
         <li class="navigation-item">
@@ -221,20 +236,20 @@
     <div class="footer-block">
       <img class="logo-footer" src="img/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
       <address class="contacts-footer">
-        <p class="contacts-footer-address">Санкт-Петербург, набережная<br>
+        <p class="contacts-footer-text">Санкт-Петербург, набережная<br>
           реки Карповки, 5, литера П.</p>
       </address>
     </div>
     <div class="footer-block">
       <ul class="navigation-footer list">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Доставка</a>
+        <li class="navigation-footer-item">
+          <a class="footer-link" href="#">Доставка</a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Гарантия</a>
+        <li class="navigation-footer-item">
+          <a class="footer-link" href="#">Гарантия</a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Контакты</a>
+        <li class="navigation-footer-item">
+          <a class="footer-link" href="#">Контакты</a>
         </li>
       </ul>
       <ul class="navigation-footer list">
@@ -257,7 +272,7 @@
     </div>
     <div class="footer-block">
       <address class="contacts-footer">
-        <a class="contacts-footer-phone" href="tel:88121212">Тел.: +7 (812) 812-12-12</a>
+        <a class="contacts-footer-text footer-phone" href="tel:88121212">Тел.: +7 (812) 812-12-12</a>
       </address>
       <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
     </div>
