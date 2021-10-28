@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <header class="page-header container">
+    <header class="page-header">
       <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
       <nav class="navigation">
         <div class="navigation-container">
           <img class="logo-header" src="img/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
         </div>
         <div class="navigation-container">
-          <form class="search">
+          <form class="search-form">
             <label class="visually-hidden" for="search-field">Поиск по сайту</label>
             <input class="search" id="search-field" type="search" name="page-search" value="Поиск по сайту">
           </form>
@@ -82,16 +82,12 @@
                 <p class="device-description">Этот обычный, на первый взгляд, квадрокоптер оснащен
                   мощным лазером, замаскированным под стандартную камеру.</p>
                 <a class="yellow-button device-details" href="#">Подробнее</a>
-                <table class="device-table">
-                  <tr class="device-table-item">
-                    <td class="device-table-key">Дальность полета</td>
-                    <td class="device-table-value">800 м</td>
-                  </tr>
-                  <tr class="device-table-item">
-                    <td class="device-table-key">Радиус поражения</td>
-                    <td class="device-table-value">50 м</td>
-                  </tr>
-                </table>
+                <dl class="device-table">
+                  <dt class="device-table-key">Дальность полета</dt>
+                  <dd class="device-table-value">800 м</dd>
+                  <dt class="device-table-key">Радиус поражения</dt>
+                  <dd class="device-table-value">50 м</dd>
+                </dl>
               </div>
             </div>
           </li>
@@ -107,12 +103,10 @@
                 <p class="device-description">Мотивирующие фитнес-браслеты помогут найти в себе силы
                   не пропускать занятия и соблюдать диету.</p>
                 <a class="yellow-button device-details" href="#">Подробнее</a>
-                <table class="device-table">
-                  <tr class="device-table-item">
-                    <td class="device-table-key">Без подзарядки</td>
-                    <td class="device-table-value">48 часов</td>
-                  </tr>
-                </table>
+                <dl class="device-table">
+                  <dt class="device-table-key">Без подзарядки</dt>
+                  <dd class="device-table-value">48 часов</dd>
+                </dl>
               </div>
             </div>
           </li>
@@ -128,20 +122,14 @@
                 <p class="device-description">Самая длинная палка для селфи доступна в нашем магазине.
                   Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
                 <a class="yellow-button device-details" href="#">Подробнее</a>
-                <table class="device-table">
-                  <tr class="device-table-item">
-                    <td class="device-table-key">Длина палки</td>
-                    <td class="device-table-value">8,5 м</td>
-                  </tr>
-                  <tr class="device-table-item">
-                    <td class="device-table-key">Вес палки</td>
-                    <td class="device-table-value">5 кг</td>
-                  </tr>
-                  <tr class="device-table-item">
-                    <td class="device-table-key">Материал</td>
-                    <td class="device-table-value">Карбон</td>
-                  </tr>
-                </table>
+                <dl class="device-table">
+                  <dt class="device-table-key">Длина палки</dt>
+                  <dd class="device-table-value">8,5 м</dd>
+                  <dt class="device-table-key">Вес палки</dt>
+                  <dd class="device-table-value">5 кг</dd>
+                  <dt class="device-table-key">Материал</dt>
+                  <dd class="device-table-value">Карбон</dd>
+                </dl>
               </div>
             </div>
           </li>
@@ -168,40 +156,22 @@
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="catalog-list list">
           <li class="catalog-item">
-            <a class="catalog-link" href="catalog.html">
-              <svg class="catalog-icon" width="160" height="160"></svg>
-              Виртуальная реальность
-            </a>
+            <a class="catalog-link" href="catalog.html">Виртуальная реальность</a>
           </li>
           <li class="catalog-item">
-            <a class="catalog-link" href="catalog.html">
-              <svg class="catalog-icon" width="160" height="160"></svg>
-              Моноподы для селфи
-            </a>
+            <a class="catalog-link" href="catalog.html">Моноподы для селфи</a>
           </li>
           <li class="catalog-item">
-            <a class="catalog-link" href="catalog.html">
-              <svg class="catalog-icon" width="160" height="160"></svg>
-              Экшн-камеры
-            </a>
+            <a class="catalog-link" href="catalog.html">Экшн-камеры</a>
           </li>
           <li class="catalog-item">
-            <a class="catalog-link" href="catalog.html">
-              <svg class="catalog-icon" width="160" height="160"></svg>
-              Фитнес-браслеты
-            </a>
+            <a class="catalog-link" href="catalog.html">Фитнес-браслеты</a>
           </li>
           <li class="catalog-item">
-            <a class="catalog-link" href="catalog.html">
-              <svg class="catalog-icon" width="160" height="160"></svg>
-              Умные часы
-            </a>
+            <a class="catalog-link" href="catalog.html">Умные часы</a>
           </li>
           <li class="catalog-item">
-            <a class="catalog-link" href="catalog.html">
-              <svg class="catalog-icon" width="160" height="160"></svg>
-              Квадрокоптеры
-            </a>
+            <a class="catalog-link" href="catalog.html">Квадрокоптеры</a>
           </li>
         </ul>
       </section>
@@ -228,7 +198,7 @@
                   мы неплохо заработаем, поднимая его на ваш этаж.</p>
               </div>
             </li>
-            <li class="tabs-item">
+            <li class="tabs-item visually-hidden">
               <div class="tab-content">
                 <h3 class="tab-title section-title">Гарантия</h3>
                 <p class="tab-text">Если из-за возгорания купленного у нас товара у вас
@@ -236,7 +206,7 @@
                   Товар, не дом, конечно же.</p>
               </div>
             </li>
-            <li class="tabs-item">
+            <li class="tabs-item visually-hidden">
               <div class="tab-content">
                 <h3 class="tab-title section-title">Кредит</h3>
                 <p class="tab-text">Залезть в долговую яму стало проще! Кредитные
@@ -247,11 +217,12 @@
           </ol>
         </div>
       </section>
-      <a class="special-delivery-link container" href="#">
-        <svg class="special-delivery-icon" width="125" height="100"></svg>
-        <span class="special-delivery-text">Доставим редкий товар под заказ</span>
-        <svg class="special-delivery-info" width="125" height="100"></svg>
-      </a>
+      <section class="special-delivery container">
+        <a class="special-delivery-link" href="#">Доставим редкий товар под заказ</a>
+        <div class="info-container">
+          <button class="special-delivery-info"><span class="visually-hidden">Посмотреть дополнительную информацию</span></button>
+        </div>
+      </section>
       <section class="contacts container">
         <div class="contacts-block">
           <h2 class="contacts-title section-title">О нас</h2>
@@ -296,34 +267,29 @@
       <section class="mailing">
         <h2 class="visually-hidden">Рассылка</h2>
         <div class="mailing-container container">
-          <div class="mailing-block">
-            <p class="section-title">Подпишитесь на рассылку</p>
-            <p class="mailing-text">Еженедельный дайджест с обзорами новинок,
-              длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-          </div>
-          <div class="mailing-block">
-            <form class="mailing-form">
-              <label class="subscription">
-                <span class="visually-hidden">Ввести электронную почту</span>
-                <input class="subscription" type="email" value="Ваш e-mail">
-              </label>
-              <button class="subscription-button" type="submit"><span class="yellow-button">Подписаться</span></button>
-            </form>
-            <span class="mailing-free">Это бесплатно</span>
-          </div>
+          <p class="section-title">Подпишитесь на рассылку</p>
+          <p class="mailing-text">Еженедельный дайджест с обзорами новинок,
+            длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          <form class="mailing-form">
+            <label class="visually-hidden" for="email">Ввести электронную почту</label>
+            <input class="subscription-input" id="email" type="email" value="Ваш e-mail">
+            <button class="subscription-button" type="submit"><span class="yellow-button">Подписаться</span></button>
+          </form>
+          <span class="free">Это бесплатно</span>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="footer-container container">
-        <div class="footer-block">
-          <img class="logo-footer" src="img/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
-          <address class="contacts-footer">
-            <p class="contacts-footer-text">Санкт-Петербург, набережная<br>
-              реки Карповки, 5, литера П.</p>
-          </address>
-        </div>
-        <div class="footer-block">
+      <div class="footer-container">
+        <img class="logo-footer" src="img/footer-logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
+        <address class="contacts-footer-address">
+          <p class="contacts-footer-text">Санкт-Петербург, набережная<br>
+            реки Карповки, 5, литера П.</p>
+        </address>
+        <address class="contacts-footer-phone">
+          <a class="contacts-footer-text footer-phone" href="tel:88121212">Тел.: +7 (812) 812-12-12</a>
+        </address>
+        <div class="navigation-footer-container">
           <ul class="navigation-footer list">
             <li class="navigation-footer-item">
               <a class="footer-link" href="#">Доставка</a>
@@ -353,12 +319,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer-block">
-          <address class="contacts-footer">
-            <a class="contacts-footer-text footer-phone" href="tel:88121212">Тел.: +7 (812) 812-12-12</a>
-          </address>
-          <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
-        </div>
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
       </div>
     </footer>
   </body>

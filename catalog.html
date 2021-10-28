@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-<header class="page-header container">
+<header class="page-header">
   <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
   <nav class="navigation">
     <div class="navigation-container">
@@ -15,7 +15,7 @@
       </a>
     </div>
     <div class="navigation-container">
-      <form class="search">
+      <form class="search-form">
         <label class="visually-hidden" for="search-field">Поиск по сайту</label>
         <input class="search" id="search-field" type="search" name="page-search" value="Поиск по сайту">
       </form>
@@ -89,8 +89,8 @@
           <button class="visually-hidden" type="submit">Отсортировать товары</button>
         </form>
         <div class="sorting-buttons">
-          <a class="sorting-type-button" href="#" ><svg class="sort-up"></svg><span class="visually-hidden">От меньшего к большему</span></a>
-          <a class="sorting-type-button" href="#" ><svg class="sort-down"></svg><span class="visually-hidden">От большего к меньшему</span></a>
+          <a class="sorting-type-button" href="#"><span class="visually-hidden">От меньшего к большему</span></a>
+          <a class="sorting-type-button" href="#"><span class="visually-hidden">От большего к меньшему</span></a>
         </div>
       </div>
     </div>
@@ -173,39 +173,31 @@
         <h3 class="visually-hidden">Список отсортированных товаров</h3>
         <ol class="devices-list list">
           <li class="device-card">
+            <a class="device-card-link" href="#"><h3 class="device-card-title">Любительская селфи-палка</h3></a>
+            <a class="device-card-link" href="#"><img class="device-card-image" src="img/catalog/device-1.jpg" width="360" height="380" alt="Тонкая черная селфи-палка"></a>
             <span class="new visually-hidden">New</span>
-            <a class="device-card-link" href="#">
-              <img class="device-card-image" src="img/catalog/device-1.jpg" width="360" height="380" alt="Тонкая черная селфи-палка">
-              <h3 class="device-card-title">Любительская селфи-палка</h3>
-            </a>
             <b class="device-card-price">500 ₽</b>
             <a class="yellow-button device-card-button" href="#">Подробнее</a>
           </li>
           <li class="device-card">
+            <a class="device-card-link" href="#"><h3 class="device-card-title">Профессиональная селфи-палка</h3></a>
+            <a class="device-card-link" href="#"><img class="device-card-image" src="img/catalog/device-2.jpg" width="360" height="380" alt="Прочная черная селфи-палка"></a>
             <span class="new visually-hidden">New</span>
-            <a class="device-card-link" href="#">
-              <img class="device-card-image" src="img/catalog/device-2.jpg" width="360" height="380" alt="Прочная черная селфи-палка">
-              <h3 class="device-card-title">Профессиональная селфи-палка</h3>
-            </a>
-            <b class="device-card-price">1500 ₽</b>
+            <b class="device-card-price">1 500 ₽</b>
             <a class="yellow-button device-card-button visually-hidden" href="#" >Подробнее</a>
           </li>
           <li class="device-card">
+            <a class="device-card-link" href="#"><h3 class="device-card-title">Непотопляемая селфи-палка</h3></a>
+            <a class="device-card-link" href="#"><img class="device-card-image" src="img/catalog/device-3.jpg" width="360" height="380" alt="Водонепроницаемая селфи-палка"></a>
             <span class="new visually-hidden">New</span>
-            <a class="device-card-link" href="#">
-              <img class="device-card-image" src="img/catalog/device-3.jpg" width="360" height="380" alt="Водонепроницаемая селфи-палка">
-              <h3 class="device-card-title">Непотопляемая селфи-палка</h3>
-            </a>
-            <b class="device-card-price">2500 ₽</b>
+            <b class="device-card-price">2 500 ₽</b>
             <a class="yellow-button device-card-button visually-hidden" href="#">Подробнее</a>
           </li>
           <li class="device-card">
-            <span class="new visually-hidden">New</span>
-            <a class="device-card-link" href="#">
-              <img class="device-card-image" src="img/catalog/device-4.jpg" width="360" height="380" alt="Cелфи-палка в виде руки">
-              <h3 class="device-card-title">Селфи-палка «Следуй за мной»</h3>
-            </a>
-            <b class="device-card-price">4900 ₽</b>
+            <a class="device-card-link" href="#"><h3 class="device-card-title">Селфи-палка «Следуй за мной»</h3></a>
+            <a class="device-card-link" href="#"><img class="device-card-image" src="img/catalog/device-4.jpg" width="360" height="380" alt="Cелфи-палка в виде руки"></a>
+            <span class="new">New</span>
+            <b class="device-card-price">4 900 ₽</b>
             <a class="yellow-button device-card-button visually-hidden" href="#" >Подробнее</a>
           </li>
         </ol>
@@ -236,15 +228,16 @@
   </div>
 </main>
 <footer class="page-footer">
-  <div class="footer-container container">
-    <div class="footer-block">
-      <img class="logo-footer" src="img/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
-      <address class="contacts-footer">
-        <p class="contacts-footer-text">Санкт-Петербург, набережная<br>
-          реки Карповки, 5, литера П.</p>
-      </address>
-    </div>
-    <div class="footer-block">
+  <div class="footer-container">
+    <img class="logo-footer" src="img/footer-logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
+    <address class="contacts-footer-address">
+      <p class="contacts-footer-text">Санкт-Петербург, набережная<br>
+        реки Карповки, 5, литера П.</p>
+    </address>
+    <address class="contacts-footer-phone">
+      <a class="contacts-footer-text footer-phone" href="tel:88121212">Тел.: +7 (812) 812-12-12</a>
+    </address>
+    <div class="navigation-footer-container">
       <ul class="navigation-footer list">
         <li class="navigation-footer-item">
           <a class="footer-link" href="#">Доставка</a>
@@ -274,12 +267,7 @@
         </li>
       </ul>
     </div>
-    <div class="footer-block">
-      <address class="contacts-footer">
-        <a class="contacts-footer-text footer-phone" href="tel:88121212">Тел.: +7 (812) 812-12-12</a>
-      </address>
-      <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
-    </div>
+    <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
   </div>
 </footer>
 </body>
