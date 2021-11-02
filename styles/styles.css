@@ -66,7 +66,7 @@ p {
 }
 
 /* Кнопки */
-.yellow-button {
+.button {
   display: inline-block;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -78,6 +78,52 @@ p {
   border: none;
   cursor: pointer;
   letter-spacing: 0.2em;
+}
+
+.yellow-button {
+  position: relative;
+  text-align: center;
+  z-index: 0;
+}
+
+.yellow-button::before {
+  content: "";
+  position: absolute;
+  background-color: #FFE17F;
+  height: 8px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: -1;
+}
+
+.yellow-button:hover:before {
+  height: 50px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.yellow-button:focus {
+  outline: none;
+}
+
+.yellow-button:focus:before {
+  background-color: #AF4FFF;
+}
+
+.yellow-button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.yellow-button:active:before {
+  background-color: #FFE17F;
+  height: 50px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 /* Заголовки блоков */
@@ -176,7 +222,7 @@ p {
   position: relative;
 }
 
-input[type="search"]::-webkit-search-cancel-button {
+.search[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
@@ -462,7 +508,6 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-left: 0;
 }
 
-
 /* Слайдер */
 .device-examples {
   margin-bottom: 50px;
@@ -611,58 +656,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .device-details {
   width: 190px;
-  text-align: center;
   padding: 15px 15px;
-  position: relative;
-  z-index: 0;
-}
-
-.device-details::before {
-  content: "";
-  position: absolute;
-  background-color: #FFE17F;
-  height: 8px;
-  top: 22px;
-  right: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.device-details:hover:before,
-.about-us-button:hover:before,
-.contacts-button:hover:before {
-  height: 50px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.device-details:focus,
-.about-us-button:focus,
-.contacts-button:focus {
-  outline: none;
-}
-
-.device-details:focus:before,
-.about-us-button:focus:before,
-.contacts-button:focus:before {
-  background-color: #AF4FFF;
-}
-
-.device-details:active,
-.about-us-button:active,
-.contacts-button:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.device-details:active:before,
-.about-us-button:active:before,
-.contacts-button:active:before {
-  background-color: #FFE17F;
-  height: 50px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
 }
 
 /* Меню каталога с иконками */
@@ -1002,33 +996,11 @@ input[type="search"]::-webkit-search-cancel-button {
   position: relative;
 }
 
-.about-us-button::before {
-  content: "";
-  position: absolute;
-  background-color: #FFE17F;
-  height: 8px;
-  bottom: 6px;
-  right: 0;
-  left: 0;
-  z-index: -1;
-}
-
 .contacts-button {
   align-self: flex-start;
   margin-top: 70px;
   width: 260px;
   position: relative;
-}
-
-.contacts-button::before {
-  content: "";
-  position: absolute;
-  background-color: #FFE17F;
-  height: 8px;
-  bottom: 6px;
-  right: 0;
-  left: 0;
-  z-index: -1;
 }
 
 /* Рассылка */
