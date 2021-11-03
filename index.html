@@ -18,43 +18,57 @@
               <path d="m15.7 14.3-3.1-3.1A7 7 0 0 0 7 0a7 7 0 0 0-7 7 7 7 0 0 0 11.2 5.6l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1a1 1 0 0 0-.3-.7ZM2 7a5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5Z" fill="#000"/>
             </svg>
             <label class="visually-hidden" for="search-field">Поиск по сайту</label>
-            <input class="search" id="search-field" type="search" name="page-search" value="Поиск по сайту">
-            <button class="search-button" type="button">Найти</button>
+            <input class="search navigation-status" id="search-field" type="search" name="page-search" value="Поиск по сайту">
+            <button class="search-button" type="submit">Найти</button>
           </form>
           <ul class="navigation-user list">
             <li class="navigation-user-item">
-              <a class="navigation-user-link" href="#"><span class="login">Войти</span></a>
+              <a class="navigation-user-link navigation-status" href="#"><span class="login">Войти</span></a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-user-link" href="#"><span class="compare">Сравнить</span></a>
+              <a class="navigation-user-link navigation-status" href="#"><span class="compare">Сравнить</span></a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-user-link" href="#"><span class="basket">Корзина</span></a>
+              <a class="navigation-user-link navigation-status" href="#"><span class="basket">Корзина</span></a>
             </li>
           </ul>
         </div>
         <div class="navigation-container">
-          <button class="catalog-button" type="button">
-            <span class="navigation-catalog-link">Каталог товаров</span>
-            <span class="visually-hidden">Показать</span>
-          </button>
-          <ul class="navigation-catalog list visually-hidden">
-            <li class="navigation-item">Виртуальная реальность</li>
-            <li class="navigation-item">Моноподы для селфи</li>
-            <li class="navigation-item">Экшн-камеры</li>
-            <li class="navigation-item">Фитнес-браслеты</li>
-            <li class="navigation-item">Умные часы</li>
-            <li class="navigation-item">Квадрокоптеры</li>
-          </ul>
+          <div class="navigation-catalog-container">
+            <button class="catalog-button" type="button">
+              <span class="navigation-catalog-button">Каталог товаров</span>
+              <span class="visually-hidden">Показать</span>
+            </button>
+            <ul class="navigation-catalog list">
+              <li class="navigation-catalog-item vr-link">
+                <a class="navigation-catalog-link navigation-status" href="catalog.html">Виртуальная реальность</a>
+              </li>
+              <li class="navigation-catalog-item monopod-link">
+                <a class="navigation-catalog-link navigation-status" href="catalog.html">Моноподы для селфи</a>
+              </li>
+              <li class="navigation-catalog-item camera-link">
+                <a class="navigation-catalog-link navigation-status" href="catalog.html">Экшн-камеры</a>
+              </li>
+              <li class="navigation-catalog-item bracelet-link">
+                <a class="navigation-catalog-link navigation-status" href="catalog.html">Фитнес-браслеты</a>
+              </li>
+              <li class="navigation-catalog-item watch-link">
+                <a class="navigation-catalog-link navigation-status" href="catalog.html">Умные часы</a>
+              </li>
+              <li class="navigation-catalog-item quadcopter-link">
+                <a class="navigation-catalog-link navigation-status" href="catalog.html">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
           <ul class="navigation-services list">
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Доставка</a>
+              <a class="navigation-link navigation-status" href="#">Доставка</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Гарантия</a>
+              <a class="navigation-link navigation-status" href="#">Гарантия</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#">Контакты</a>
+              <a class="navigation-link navigation-status" href="#">Контакты</a>
             </li>
           </ul>
         </div>
