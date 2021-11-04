@@ -39,6 +39,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  min-width: 1220px;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   background-color: #FFFFFF;
@@ -73,6 +74,7 @@ p {
   line-height: 21px;
   text-align: center;
   color: #000000;
+  background: none;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
@@ -167,7 +169,7 @@ p {
 /* Навигация */
 .navigation {
   margin: 0 auto;
-  padding: 17px 40px 30px 40px;
+  padding: 12px 40px 30px 40px;
 }
 
 .navigation-container {
@@ -175,7 +177,7 @@ p {
 }
 
 .navigation-container:first-child {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding-left: 20px;
 }
 
@@ -202,15 +204,20 @@ p {
 /* Логотип */
 .logo-link {
   height: 36px;
+  padding: 5px;
+  transform: translate(-4px);
 }
 
 .logo-link:focus {
-  transform: translate(-5px, -5px);
   margin-bottom: 0;
   padding: 3px;
   border: 2px solid #AF4FFF;
   border-radius: 20px;
   outline: none;
+}
+
+.logo-link:active {
+  border-color: transparent;
 }
 
 /* Поиск по сайту */
@@ -331,6 +338,10 @@ p {
   background: url("../img/person.svg") no-repeat left;
 }
 
+.logout {
+  opacity: 0.3;
+}
+
 .compare {
   padding-left: 20px;
   background: url("../img/compare.svg") no-repeat left;
@@ -372,9 +383,8 @@ p {
 
 .catalog-button {
   position: relative;
-  padding: 0 50px 0 0;
-  margin-right: auto;
-  margin-left: 5px;
+  padding: 0 48px 0 0;
+  margin-left: 0;
   border: none;
   background: none;
   cursor: pointer;
@@ -583,6 +593,7 @@ p {
   position: relative;
 }
 
+/* Стрелки вправо-влево */
 .device-navigation-arrows {
   position: absolute;
   top: 0;
@@ -624,12 +635,14 @@ p {
   border: none;
 }
 
+/* Кнопки-буллеты */
 .device-navigation-radio {
   position: absolute;
   bottom: 150px;
   right: 60px;
   margin-right: 20px;
   display: flex;
+  flex-wrap: wrap;
   z-index: 2;
   margin-bottom: 55px;
 }
@@ -666,10 +679,15 @@ p {
   opacity: 0.3;
 }
 
+/* Содержимое слайдера */
 .slider-item {
-  display: flex;
+  display: none;
   justify-content: space-between;
   background: linear-gradient(to bottom, #FFE17F 122px, #FFFFFF 0);
+}
+
+.slider-item-current {
+  display: flex;
 }
 
 .slider-container {
@@ -1792,4 +1810,225 @@ p {
   padding: 12px 0;
   border: none;
   transform: none;
+}
+
+/* Модальное окно */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 2;
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  border: 10px solid #000000;
+  padding: 70px;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.modal-delivery {
+  width: 760px;
+}
+
+.modal-title {
+  margin-bottom: 65px;
+}
+
+.modal-close-button {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 23px;
+  right: 8px;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-close-icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-close-button:hover .modal-close-icon {
+  opacity: 0.6;
+}
+
+.modal-close-button:focus {
+  outline: none;
+}
+
+.modal-close-button:focus .modal-close-icon {
+  opacity: 1;
+  border: 5px solid #AF4FFF;
+  border-radius: 50%;
+}
+
+.modal-close-button:active .modal-close-icon {
+  opacity: 0.3;
+  border: none;
+}
+
+.delivery-form {
+  display: grid;
+  grid-template-columns: 360px 160px 160px;
+  column-gap: 40px;
+  row-gap: 14px;
+  font-family: "Rubik", sans-serif;
+}
+
+.field-name {
+  grid-column:  1 / 2;
+}
+
+.field-email {
+  grid-column:  2 / -1;
+}
+
+.field-description {
+  grid-column:  1 / -2;
+}
+
+.field-number {
+  grid-column:  -2 / -1;
+  position: relative;
+}
+
+.delivery-form-button {
+  margin-right: auto;
+}
+
+.delivery-form-label {
+  display: block;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000000;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+.delivery-info-icon {
+  position: absolute;
+  top: -7px;
+  right: 9px;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background-color: #FFE17F;
+  border: 5px solid #FFFFFF;
+  border-radius: 50%;
+  background-image: url("../img/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.delivery-info {
+  display: none;
+  transform: translate(20px);
+  color: #FFFFFF;
+  font-size: 16px;
+  width: 164px;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  padding: 23px 18px 23px;
+  background-color: #000000;
+}
+
+.delivery-info::before {
+  content: "";
+  background: #FFFFFF url("../img/arrows/thin-triangle.svg") no-repeat 146px;
+  transform: translate(-18px, -23px);
+  display: block;
+  height: 6px;
+  width: 200px;
+}
+
+.delivery-info-icon:hover + .delivery-info,
+.delivery-info:hover {
+  display: block;
+}
+
+.delivery-form-field {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 3px;
+  padding: 18px 50px 16px 17px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #F0F0F0;
+  border: 3px solid #F0F0F0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.delivery-form-field#delivery-name {
+  background: #F0F0F0 url("../img/form-person.svg") no-repeat center right 24px;
+}
+
+.delivery-form-field#delivery-email {
+  background: #F0F0F0 url("../img/mail.svg") no-repeat center right 24px;
+}
+
+.delivery-form-field:hover {
+  background-color: #EBEBEB;
+  border-color: #EBEBEB;
+}
+
+.delivery-form-field:focus {
+  outline: 5px solid #AF4FFF;
+}
+
+.delivery-form-field:active {
+  outline: none;
+  border-color: #000000;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 1);
+}
+
+.delivery-form-error,
+.delivery-form-error:hover {
+  border-color: #FF3D3D;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 1);
+}
+
+.delivery-form-error + .delivery-form-span {
+  color: #FF3D3D;
+}
+
+.delivery-form-span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.delivery-form-button {
+  padding: 0 30px;
+  margin-top: 36px;
+}
+
+.delivery-form-button:before,
+.delivery-form-button:active:before {
+  background-color: #FFC700;
 }
