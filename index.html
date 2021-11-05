@@ -21,8 +21,8 @@
         <!-- Поиск по сайту -->
         <div class="navigation-container">
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-            <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="m15.7 14.3-3.1-3.1A7 7 0 0 0 7 0a7 7 0 0 0-7 7 7 7 0 0 0 11.2 5.6l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1a1 1 0 0 0-.3-.7ZM2 7a5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5Z" fill="#000"/>
+            <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="#000" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="m15.7 14.3-3.1-3.1A7 7 0 0 0 7 0a7 7 0 0 0-7 7 7 7 0 0 0 11.2 5.6l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1a1 1 0 0 0-.3-.7ZM2 7a5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5Z"/>
             </svg>
             <label class="visually-hidden" for="search-field">Поиск по сайту</label>
             <input class="search navigation-status" id="search-field" type="search" name="page-search" value="Поиск по сайту">
@@ -38,12 +38,54 @@
               <a class="navigation-user-link navigation-status" href="#"><span class="compare">Сравнить</span></a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-user-link navigation-status" href="#"><span class="basket">Корзина</span></a>
+              <a class="navigation-user-link navigation-status" href="#"><span class="cart">Корзина</span></a>
+
+              <!-- Попап корзины -->
+              <!-- Открыть: popup-open -->
+              <div class="popup popup-cart">
+                <button class="popup-close-button button">
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
+                <div class="popup-content">
+                  <h2 class="popup-title visually-hidden">Корзина</h2>
+                  <ul class="cart-items-list list">
+                    <li class="cart-item">
+                      <a class="cart-item-link" href="#">
+                        <span class="cart-item-icon monopod-1"></span>
+                        <p class="cart-item-title">Любительская<br> селфи-палка</p>
+                      </a>
+                      <button class="cart-item-button button" type="button">
+                        <svg class="delete-item" width="11" height="11" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="m11 1-1-1-4.5 4.5L1 0 0 1l4.5 4.5L0 10l1 1 4.5-4.5L10 11l1-1-4.5-4.5L11 1Z"/>
+                        </svg>
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                    </li>
+                    <li class="cart-item">
+                      <a class="cart-item-link" href="#">
+                        <span class="cart-item-icon monopod-2"></span>
+                        <p class="cart-item-title">Профессиональная селфи-палка</p>
+                      </a>
+                      <button class="cart-item-button button" type="button">
+                        <svg class="delete-item" width="11" height="11" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="m11 1-1-1-4.5 4.5L1 0 0 1l4.5 4.5L0 10l1 1 4.5-4.5L10 11l1-1-4.5-4.5L11 1Z"/>
+                        </svg>
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="cart-items-total">
+                    <p class="cart-items-number">Товаров: 2</p>
+                    <p class="cart-items-price">Сумма: 2000 ₽</p>
+                  </div>
+                  <a class="cart-open-link button" href="#">Открыть корзину</a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
 
-        <!-- Выпадающее меню -->
+        <!-- Вложенное меню -->
         <div class="navigation-container">
           <div class="navigation-catalog-container">
             <button class="catalog-button" type="button">
@@ -87,6 +129,7 @@
         </div>
       </nav>
     </header>
+
     <main class="main-container main-index">
       <section class="device-examples container">
         <h2 class="visually-hidden">Примеры товаров</h2>
@@ -211,7 +254,7 @@
                   6.07 0 0 0-3.63 5.56V117h14.33v-14.3c0-2.5-1.5-4.63-3.63-5.56v-28h4.8l5.04 1.22v-6.71l-5.05 1.21h-4.8Z"/>
                 </svg>
               </div>
-              Моноподы для селфи
+              Моноподы<br> для селфи
             </a>
           </li>
           <li class="catalog-item">
@@ -347,19 +390,19 @@
             </li>
           </ol>
           <ol class="navigation-tabs list">
-            <li class="tabs-item tab-delivery">
+            <li class="current-tab tabs-item tab-delivery">
               <h3 class="tab-title section-title">Доставка</h3>
-              <p class="tab-text">Мы с удовольствием доставим ваш товар прямо
-                к вашему подъезду совершенно бесплатно! Ведь
+              <p class="tab-text">Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно! Ведь<br>
                 мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="tabs-item tab-guarantee visually-hidden">
+            <li class="tabs-item tab-guarantee">
               <h3 class="tab-title section-title">Гарантия</h3>
               <p class="tab-text">Если из-за возгорания купленного у нас товара у вас
                 сгорит дом — не переживайте, мы выдадим вам новый.
                 Товар, не дом, конечно же.</p>
             </li>
-            <li class="tabs-item tab-credit visually-hidden">
+            <li class="tabs-item tab-credit">
               <h3 class="tab-title section-title">Кредит</h3>
               <p class="tab-text">Залезть в долговую яму стало проще! Кредитные
                 консультанты подберут для вас наиболее выгодные
@@ -544,7 +587,7 @@
     </footer>
 
     <!-- Модальное окно -->
-    <div class="modal-container">
+    <div class="modal-container modal-container-close">
       <div class="modal modal-delivery">
         <button class="modal-close-button">
           <span class="modal-close-icon">
@@ -575,6 +618,16 @@
               <label class="delivery-form-label" for="delivery-number">Количество:</label>
               <span class="delivery-info-icon"><span class="visually-hidden">Посмотреть дополнительную информацию</span></span>
               <span class="delivery-info">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+              <button class="number-button number-minus" type="button">
+                <svg class="number-icon" aria-hidden="true" focusable="false" width="16" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0H0v2h16V0Z"/>
+                </svg>
+              </button>
+              <button class="number-button number-plus" type="button">
+                <svg class="number-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z"/>
+                </svg>
+              </button>
               <input class="delivery-form-field" type="number" id="delivery-number" name="delivery-number" placeholder="1">
             </p>
             <button class="button yellow-button delivery-form-button" type="submit">Отправить</button>
