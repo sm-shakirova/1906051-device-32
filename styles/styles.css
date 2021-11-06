@@ -172,6 +172,10 @@ p {
   padding: 12px 40px 30px 40px;
 }
 
+.navigation-inner-page {
+  padding-bottom: 38px;
+}
+
 .navigation-container {
   display: flex;
 }
@@ -749,12 +753,12 @@ p {
 
 /* Хлебные крошки */
 .inner-header {
-  margin-top: 35px;
-  margin-bottom: 55px;
+  margin-top: 38px;
+  margin-bottom: 44px;
 }
 
 .catalog-title {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   margin-left: 60px;
 }
 
@@ -1435,21 +1439,28 @@ p {
   padding-left: 20px;
   width: 200px;
   padding-right: 20px;
-  margin: 70px 50px 0 40px;
+  margin: 84px 50px 0 40px;
 }
 
 .filters-group {
   padding: 0;
   border: none;
-  margin: 0 0 50px;
+  margin: 0 0 36px;
   font-size: 16px;
 }
 
+.filters-group:last-of-type {
+  margin: 0 0 30px;
+}
+
 .filters-group-title {
-  margin-bottom: 25px;
+  padding: 0;
+  margin-bottom: 29px;
+  position: relative;
+  font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-  position: relative;
+  letter-spacing: -0.02em;
 }
 
 .filters-group-title::before {
@@ -1459,13 +1470,261 @@ p {
   background-color: #000000;
   display: block;
   position: absolute;
-  top: -15px;
+  top: -14px;
+  left: -1px;
 }
 
 .color-item, .bluetooth-item {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
+/* Шкала стоимости */
+.range {
+  margin-top: 8px;
+  margin-bottom: 45px;
+}
+
+.range-scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 16px;
+  background-color: #DCDCDC;
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -8px;
+  min-width: 18px;
+  min-height: 18px;
+  background: #EBEBEB;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle-min, .range-from {
+  left: 0;
+}
+
+.range-from {
+  transform: translate(-20%);
+}
+
+.toggle-max, .range-to {
+  right: 0;
+}
+
+.range-to {
+  transform: translate(35%);
+}
+
+.range-input {
+  padding: 0;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-input:focus {
+  outline: none;
+}
+
+.range-toggle-label {
+  position: absolute;
+  top: 17px;
+  color: rgba(0, 0, 0, 0.3);
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.range-toggle:hover {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.range-toggle:focus {
+  border-color: #AF4FFF;
+  outline: none;
+}
+
+.range-toggle:focus + .range-toggle-label {
+  color: rgba(175, 79, 255, 0.3);
+}
+
+.range-toggle:active {
+  border-color: #000000;
+  background: #000000;
+}
+
+.range-toggle:active + .range-toggle-label {
+  color: rgba(0, 0, 0, 1);
+}
+
+/* Чекбокс */
+.control {
+  position: relative;
+  display: block;
+  padding-left: 33px;
+  cursor: pointer;
+}
+
+.color-label::before {
+  content: "";
+  top: -1px;
+  left: 0;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.color-input[type="checkbox"]:checked ~ .color-label::before {
+  border-color: rgba(0, 0, 0, 1);
+}
+
+.checkbox-icon {
+  display: none;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+}
+
+.color-input[type="checkbox"] {
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.color-input[type="checkbox"]:checked ~ .checkbox-icon {
+  display: block;
+}
+
+.color-input[type="checkbox"]:hover:checked ~ .checkbox-icon::before {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.color-input[type="checkbox"]:hover:checked ~ .color-label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.color-input[type="checkbox"]:focus ~ .checkbox-icon {
+  fill: #AF4FFF;
+}
+
+.color-input[type="checkbox"]:focus ~ .color-label {
+  color: #AF4FFF;
+}
+
+.color-input[type="checkbox"]:focus ~ .color-label::before {
+  border-color: #AF4FFF;
+}
+
+.color-input[type="checkbox"]:active ~ .checkbox-icon {
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.color-input[type="checkbox"]:active ~ .color-label {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.color-input[type="checkbox"]:active ~ .color-label::before {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Радио-кнопки */
+.control-mark {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  top: -1px;
+  left: 0;
+}
+
+.bluetooth-input[type="radio"]:checked ~ .control-mark {
+  border-color: rgba(0, 0, 0, 1);
+}
+
+.control-mark::after {
+  content: "";
+  display: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000000;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.bluetooth-input[type="radio"]:checked ~ .control-mark::after {
+  display: block;
+}
+
+.bluetooth-input[type="radio"] {
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.bluetooth-input[type="radio"]:hover:checked ~ .control-mark {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.bluetooth-input[type="radio"]:hover:checked ~ .control-mark::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bluetooth-input[type="radio"]:hover:checked ~ .bluetooth-label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.bluetooth-input[type="radio"]:focus ~ .control-mark {
+  border-color: #AF4FFF;
+}
+
+.bluetooth-input[type="radio"]:focus ~ .control-mark::after {
+  background-color: #AF4FFF;
+}
+
+.bluetooth-input[type="radio"]:focus ~ .bluetooth-label {
+  color: #AF4FFF;
+}
+
+.bluetooth-input[type="radio"]:active ~ .control-mark {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.bluetooth-input[type="radio"]:active ~ .control-mark::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bluetooth-input[type="radio"]:active ~ .bluetooth-label {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопка "Показать" */
 .filters-button {
   position: relative;
   width: 200px;
@@ -1506,7 +1765,7 @@ p {
   width: 760px;
   display: flex;
   align-items: center;
-  margin: 15px 0 15px 70px;
+  margin: 20px 0 20px 70px;
 }
 
 .sorting-title {
@@ -1549,6 +1808,7 @@ p {
 
 .sorting-buttons {
   display: flex;
+  transform: translate(7px);
 }
 
 .sorting-type-button {
@@ -1578,11 +1838,16 @@ p {
   outline: none;
 }
 
+.sorting-type-button-current,
+.sorting-type-button-current:hover {
+  opacity: 1;
+}
+
 /* Список товаров */
 .devices-list {
   display: grid;
   grid-template-columns: repeat(2, 360px);
-  gap: 40px;
+  gap: 46px 40px;
   margin-top: 70px;
   margin-bottom: 45px;
 }
@@ -1594,11 +1859,9 @@ p {
 
 .device-card-link {
   display: grid;
-  grid-template-columns: 240px 110px;
+  grid-template-columns: 260px 90px;
   grid-template-rows: 380px min-content;
-  gap: 35px 10px;
-  line-height: 24px;
-  font-weight: 700;
+  gap: 32px 10px;
   color: inherit;
   text-decoration: none;
 }
@@ -1607,6 +1870,10 @@ p {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .new {
@@ -1615,8 +1882,8 @@ p {
   justify-self: end;
   margin-right: 27px;
   margin-top: 27px;
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   border: 2px solid rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   background: url("../img/new.svg") no-repeat center;
@@ -1630,6 +1897,7 @@ p {
   font-weight: 400;
   color: #444444;
   text-transform: uppercase;
+  transform: translateY(3px);
 }
 
 .device-card-image {
@@ -1714,8 +1982,8 @@ p {
   width: 760px;
   background: none;
   border: 3px solid rgba(0, 0, 0, 0.1);
-  padding: 20px 0;
-  margin-bottom: 50px;
+  padding: 15px 0;
+  margin-bottom: 52px;
   box-sizing: border-box;
   letter-spacing: 0.2em;
   cursor: pointer;
@@ -1743,7 +2011,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 77px;
+  margin-bottom: 78px;
 }
 
 .pagination-list {

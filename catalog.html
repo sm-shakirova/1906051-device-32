@@ -6,15 +6,23 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+
+<!-- Шапка -->
 <header class="page-header">
-  <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
-  <nav class="navigation">
+
+  <!-- Главный заголовок -->
+  <h1 class="visually-hidden">Каталог интернет-магазина "Девайс"</h1>
+  <nav class="navigation navigation-inner-page">
+
+    <!-- Логотип -->
     <div class="navigation-container">
       <a class="logo-link" href="index.html">
         <span class="visually-hidden">Вернуться на главную страницу</span>
         <img class="logo-header" src="img/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
       </a>
     </div>
+
+    <!-- Поиск по сайту -->
     <div class="navigation-container">
       <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
         <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,6 +32,8 @@
         <input class="search navigation-status" id="search-field" type="search" name="page-search" value="Поиск по сайту">
         <button class="search-button" type="submit">Найти</button>
       </form>
+
+      <!-- Пользовательское меню -->
       <ul class="navigation-user list">
         <li class="navigation-user-item">
           <a class="navigation-user-link navigation-status" href="#"><span class="username login">Коля Петухов</span></a>
@@ -36,9 +46,53 @@
         </li>
         <li class="navigation-user-item">
           <a class="navigation-user-link navigation-status" href="#"><span class="basket">Корзина</span></a>
+
+          <!-- Попап корзины -->
+          <!-- Открыть: popup-open -->
+          <div class="popup popup-cart">
+            <button class="popup-close-button button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <div class="popup-content">
+              <h2 class="popup-title visually-hidden">Корзина</h2>
+              <ul class="cart-items-list list">
+                <li class="cart-item">
+                  <a class="cart-item-link" href="#">
+                    <span class="cart-item-icon monopod-1"></span>
+                    <p class="cart-item-title">Любительская<br> селфи-палка</p>
+                  </a>
+                  <button class="cart-item-button button" type="button">
+                    <svg class="delete-item" width="11" height="11" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="m11 1-1-1-4.5 4.5L1 0 0 1l4.5 4.5L0 10l1 1 4.5-4.5L10 11l1-1-4.5-4.5L11 1Z"/>
+                    </svg>
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+                <li class="cart-item">
+                  <a class="cart-item-link" href="#">
+                    <span class="cart-item-icon monopod-2"></span>
+                    <p class="cart-item-title">Профессиональная селфи-палка</p>
+                  </a>
+                  <button class="cart-item-button button" type="button">
+                    <svg class="delete-item" width="11" height="11" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="m11 1-1-1-4.5 4.5L1 0 0 1l4.5 4.5L0 10l1 1 4.5-4.5L10 11l1-1-4.5-4.5L11 1Z"/>
+                    </svg>
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="cart-items-total">
+                <p class="cart-items-number">Товаров: 2</p>
+                <p class="cart-items-price">Сумма: 2000 ₽</p>
+              </div>
+              <a class="cart-open-link button" href="#">Открыть корзину</a>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
+
+    <!-- Вложенное меню -->
     <div class="navigation-container">
       <button class="catalog-button" type="button">
         <span class="navigation-catalog-button">Каталог товаров</span>
@@ -64,6 +118,8 @@
           <a class="navigation-catalog-link navigation-status" href="catalog.html">Квадрокоптеры</a>
         </li>
       </ul>
+
+      <!-- Навигация по услугам -->
       <ul class="navigation-services list">
         <li class="navigation-item">
           <a class="navigation-link navigation-status" href="#">Доставка</a>
@@ -78,6 +134,8 @@
     </div>
   </nav>
 </header>
+
+<!-- Хлебные крошки -->
 <main class="main-container main-inner">
   <header class="inner-header container">
     <h2 class="section-title catalog-title">Моноподы для селфи</h2>
@@ -99,6 +157,8 @@
       </li>
     </ul>
   </header>
+
+  <!-- Сортировка -->
   <div class="background-titles">
     <div class="inner-container container">
       <h3 class="filters-title">Фильтр:</h3>
@@ -113,93 +173,109 @@
         </form>
         <div class="sorting-buttons">
           <a class="sorting-type-button" href="#"><span class="visually-hidden">От меньшего к большему</span></a>
-          <a class="sorting-type-button" href="#"><span class="visually-hidden">От большего к меньшему</span></a>
+          <a class="sorting-type-button sorting-type-button-current" href="#"><span class="visually-hidden">От большего к меньшему</span></a>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Фильтры -->
   <div class="background-content">
     <div class="inner-container container">
       <section class="filters-block">
         <form class="filters-form" action="https://echo.htmlacademy.ru/" method="get">
+
+          <!-- Фильтр по стоимости -->
           <fieldset class="filters-group">
             <legend class="filters-group-title">Стоимость</legend>
-            <button class="range toggle-min" type="button">
-              <span class="visually-hidden">Изменить минимальную цену</span>
-            </button>
-            <button class="range toggle-max" type="button">
-              <span class="visually-hidden">Изменить максимальную цену</span>
-            </button>
-            <label class="price-control">
-              от <input class="min-price-input" type="number" name="min-price" value="0">
-            </label>
-            <label class="price-control">
-              до <input class="max-price-input" type="number" name="max-price" value="5000">
-            </label>
+            <div class="range">
+              <div class="range-scale">
+                <div class="range-bar" style="left: 0; width: 128px">
+                  <button class="range-toggle toggle-min">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <label class="range-toggle-label range-from">
+                    от <input class="range-input" type="number" value="0" name="min-price" style="width: 10px">
+                  </label>
+                  <button class="range-toggle toggle-max">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
+                  <label class="range-toggle-label range-to">
+                    до <input class="range-input" type="number" value="5000" name="max-price" style="width: 40px">
+                  </label>
+                </div>
+              </div>
+            </div>
           </fieldset>
+
+          <!-- Фильтр по цвету -->
           <fieldset class="filters-group">
             <legend class="filters-group-title">Цвет</legend>
             <ul class="color-list list">
               <li class="color-item">
                 <label class="control">
-                  <span class="color-label">Черный</span>
                   <input class="color-input" type="checkbox" name="black" checked>
-                  <svg class="checkbox-icon" aria-hidden="true" focusable="false" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 0 4.4 9.3 0 5v4.7L4.5 14 14 4.7V0Z"/>
+                  <span class="color-label">Черный</span>
+                  <svg class="checkbox-icon" aria-hidden="true" focusable="false" width="10" height="10" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z"/>
                   </svg>
                 </label>
               </li>
               <li class="color-item">
                 <label class="control">
-                  <span class="color-label">Белый</span>
                   <input class="color-input" type="checkbox" name="white" checked>
-                  <svg class="checkbox-icon" aria-hidden="true" focusable="false" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 0 4.4 9.3 0 5v4.7L4.5 14 14 4.7V0Z"/>
+                  <span class="color-label">Белый</span>
+                  <svg class="checkbox-icon" aria-hidden="true" focusable="false" width="10" height="10" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z"/>
                   </svg>
                 </label>
               </li>
               <li class="color-item">
                 <label class="control">
-                  <span class="color-label">Синий</span>
                   <input class="color-input" type="checkbox" name="blue">
-                  <svg class="checkbox-icon" aria-hidden="true" focusable="false" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 0 4.4 9.3 0 5v4.7L4.5 14 14 4.7V0Z"/>
+                  <span class="color-label">Синий</span>
+                  <svg class="checkbox-icon" aria-hidden="true" focusable="false" width="10" height="10" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z"/>
                   </svg>
                 </label>
               </li>
               <li class="color-item">
                 <label class="control">
-                  <span class="color-label">Красный</span>
                   <input class="color-input" type="checkbox" name="red">
-                  <svg class="checkbox-icon" aria-hidden="true" focusable="false" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 0 4.4 9.3 0 5v4.7L4.5 14 14 4.7V0Z"/>
+                  <span class="color-label">Красный</span>
+                  <svg class="checkbox-icon" aria-hidden="true" focusable="false" width="10" height="10" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z"/>
                   </svg>
                 </label>
               </li>
               <li class="color-item">
                 <label class="control">
-                  <span class="color-label">Розовый</span>
                   <input class="color-input" type="checkbox" name="rose">
-                  <svg class="checkbox-icon" aria-hidden="true" focusable="false" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 0 4.4 9.3 0 5v4.7L4.5 14 14 4.7V0Z"/>
+                  <span class="color-label">Розовый</span>
+                  <svg class="checkbox-icon" aria-hidden="true" focusable="false" width="10" height="10" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z"/>
                   </svg>
                 </label>
               </li>
             </ul>
           </fieldset>
+
+          <!-- Фильтр по наличию bluetooth -->
           <fieldset class="filters-group">
             <legend class="filters-group-title">Bluetooth</legend>
             <ul class="bluetooth-list list">
               <li class="bluetooth-item">
                 <label class="control">
-                  <span class="bluetooth-label">Есть</span>
                   <input class="bluetooth-input" type="radio" name="bluetooth" value="yes" checked>
+                  <span class="bluetooth-label">Есть</span>
+                  <span class="control-mark"></span>
                 </label>
               </li>
               <li class="bluetooth-item">
                 <label class="control">
-                  <span class="bluetooth-label">Нет</span>
                   <input class="bluetooth-input" type="radio" name="bluetooth" value="no">
+                  <span class="bluetooth-label">Нет</span>
+                  <span class="control-mark"></span>
                 </label>
               </li>
             </ul>
@@ -207,8 +283,10 @@
           <button class="button filters-button" type="submit">Показать</button>
         </form>
       </section>
+
+      <!-- Список товаров -->
       <section class="catalog-products">
-        <h3 class="visually-hidden">Список отсортированных товаров</h3>
+        <h3 class="visually-hidden">Список товаров</h3>
         <ol class="devices-list list">
           <li class="device-card">
             <a class="device-card-link" href="#">
@@ -221,7 +299,7 @@
           </li>
           <li class="device-card">
             <a class="device-card-link" href="#">
-              <h3 class="device-card-title">Профессиональная селфи-палка</h3>
+              <h3 class="device-card-title">Профессиональная<br> селфи-палка</h3>
               <img class="device-card-image" src="img/catalog/device-2.jpg" width="360" height="380" alt="Прочная черная селфи-палка">
               <div class="new visually-hidden"><span class="visually-hidden">Новое</span></div>
               <b class="device-card-price">1 500 ₽</b>
@@ -230,7 +308,7 @@
           </li>
           <li class="device-card">
             <a class="device-card-link" href="#">
-              <h3 class="device-card-title">Непотопляемая селфи-палка</h3>
+              <h3 class="device-card-title">Непотопляемая<br> селфи-палка</h3>
               <img class="device-card-image" src="img/catalog/device-3.jpg" width="360" height="380" alt="Водонепроницаемая селфи-палка">
               <div class="new visually-hidden"><span class="visually-hidden">Новое</span></div>
               <b class="device-card-price">2 500 ₽</b>
@@ -247,6 +325,8 @@
             <a class="button grey-layer" href="#"><span class="device-card-button">Подробнее</span></a>
           </li>
         </ol>
+
+        <!-- Пагинация -->
         <button class="show-more-button" type="button">Загрузить еще</button>
         <div class="pagination">
           <a class="pagination-prev">Назад</a>
@@ -273,9 +353,15 @@
     </div>
   </div>
 </main>
+
+<!-- Подвал -->
 <footer class="page-footer">
   <div class="footer-container">
+
+    <!-- Логотип -->
     <img class="logo-footer" src="img/footer-logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
+
+    <!-- Контакты -->
     <address class="contacts-footer-address">
       <p class="contacts-footer-text">Санкт-Петербург, набережная<br>
         реки Карповки, 5, литера П.</p>
@@ -283,6 +369,8 @@
     <address class="contacts-footer-phone">
       <a class="contacts-footer-text footer-phone" href="tel:88121212">Тел.: +7 (812) 812-12-12</a>
     </address>
+
+    <!-- Навигация по услугам -->
     <div class="navigation-footer-container">
       <ul class="navigation-footer list">
         <li class="navigation-footer-item">
@@ -295,6 +383,8 @@
           <a class="footer-link" href="#">Контакты</a>
         </li>
       </ul>
+
+      <!-- Соц. сети -->
       <ul class="navigation-footer list">
         <li class="social-media-item">
           <a class="social-media-link" href="https://www.facebook.com/htmlacademy">
