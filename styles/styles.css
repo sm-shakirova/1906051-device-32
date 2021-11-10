@@ -50,11 +50,6 @@ body {
   flex-grow: 1;
 }
 
-p {
-  color: #444444;
-  margin: 0;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -648,7 +643,6 @@ p {
 .catalog-button:active > .navigation-catalog-button {
   color: rgba(0, 0, 0, 0.3);
   border-color: transparent;
-  margin: 0;
 }
 
 .catalog-button::after {
@@ -962,17 +956,18 @@ p {
   font-size: 180px;
   line-height: 30px;
   text-align: right;
-  margin-top: 53px;
+  margin: 53px 0 0;
   padding-right: 50px;
 }
 
 .device-motto {
-  margin-bottom: 28px;
+  margin: 0 0 28px;
 }
 
 .device-description {
   line-height: 30px;
-  margin-bottom: 35px;
+  margin: 0 0 35px;
+  color: #444444;
 }
 
 .device-table {
@@ -1181,6 +1176,7 @@ p {
   line-height: 30px;
   display: block;
   width: 500px;
+  color: #444444;
 }
 
 /* Доставка редких товаров */
@@ -1310,7 +1306,7 @@ p {
 
 .contacts-text {
   line-height: 30px;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
 }
 
 .contacts-address {
@@ -1395,6 +1391,8 @@ p {
   grid-column: 2 / 4;
   line-height: 30px;
   align-self: end;
+  color: #444444;
+  margin: 0;
 }
 
 .mailing-form {
@@ -2490,6 +2488,10 @@ p {
   column-gap: 40px;
   row-gap: 13px;
   font-family: "Rubik", sans-serif;
+}
+
+.field-group {
+  margin: 0;
 }
 
 .field-name {
