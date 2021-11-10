@@ -19,7 +19,7 @@
     <div class="navigation-container">
       <a class="logo-link" href="index.html">
         <span class="visually-hidden">Вернуться на главную страницу</span>
-        <img class="logo-header" src="img/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
+        <img class="logo-header" src="img/logo/logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
       </a>
     </div>
 
@@ -37,17 +37,16 @@
       <!-- Пользовательское меню -->
       <ul class="navigation-user list">
         <li class="navigation-user-item">
-          <a class="navigation-user-link navigation-status" href="#"><span class="username login">Коля Петухов</span></a>
+          <a class="navigation-user-link navigation-status" href="#"><span class="username">Коля Петухов</span></a>
           <a class="navigation-user-link navigation-status" href="#"><span class="logout">Выйти</span></a>
         </li>
         <li class="navigation-user-item">
           <a class="navigation-user-link navigation-status" href="#"><span class="compare">Сравнить</span></a>
         </li>
         <li class="navigation-user-item">
-          <a class="navigation-user-link navigation-status" href="#"><span class="cart">Корзина</span></a>
+          <a class="navigation-user-link navigation-status cart-link" href="#"><span class="cart">Корзина</span></a>
 
           <!-- Попап корзины -->
-          <!-- Открыть: popup-open -->
           <div class="popup popup-cart">
             <button class="popup-close-button button">
               <span class="visually-hidden">Закрыть</span>
@@ -93,30 +92,32 @@
 
     <!-- Вложенное меню -->
     <div class="navigation-container">
-      <button class="catalog-button" type="button">
-        <span class="navigation-catalog-button">Каталог товаров</span>
-        <span class="visually-hidden">Показать</span>
-      </button>
-      <ul class="navigation-catalog list">
-        <li class="navigation-catalog-item vr-link">
-          <a class="navigation-catalog-link navigation-status" href="catalog.html">Виртуальная реальность</a>
-        </li>
-        <li class="navigation-catalog-item monopod-link">
-          <a class="navigation-catalog-link navigation-status" href="catalog.html">Моноподы для селфи</a>
-        </li>
-        <li class="navigation-catalog-item camera-link">
-          <a class="navigation-catalog-link navigation-status" href="catalog.html">Экшн-камеры</a>
-        </li>
-        <li class="navigation-catalog-item bracelet-link">
-          <a class="navigation-catalog-link navigation-status" href="catalog.html">Фитнес-браслеты</a>
-        </li>
-        <li class="navigation-catalog-item watch-link">
-          <a class="navigation-catalog-link navigation-status" href="catalog.html">Умные часы</a>
-        </li>
-        <li class="navigation-catalog-item quadcopter-link">
-          <a class="navigation-catalog-link navigation-status" href="catalog.html">Квадрокоптеры</a>
-        </li>
-      </ul>
+      <div class="navigation-catalog-container">
+        <button class="catalog-button" type="button">
+          <span class="navigation-catalog-button">Каталог товаров</span>
+          <span class="visually-hidden">Показать</span>
+        </button>
+        <ul class="navigation-catalog list">
+          <li class="navigation-catalog-item vr-link">
+            <a class="navigation-catalog-link navigation-status" href="catalog.html">Виртуальная реальность</a>
+          </li>
+          <li class="navigation-catalog-item monopod-link">
+            <a class="navigation-catalog-link navigation-status" href="catalog.html">Моноподы для селфи</a>
+          </li>
+          <li class="navigation-catalog-item camera-link">
+            <a class="navigation-catalog-link navigation-status" href="catalog.html">Экшн-камеры</a>
+          </li>
+          <li class="navigation-catalog-item bracelet-link">
+            <a class="navigation-catalog-link navigation-status" href="catalog.html">Фитнес-браслеты</a>
+          </li>
+          <li class="navigation-catalog-item watch-link">
+            <a class="navigation-catalog-link navigation-status" href="catalog.html">Умные часы</a>
+          </li>
+          <li class="navigation-catalog-item quadcopter-link">
+            <a class="navigation-catalog-link navigation-status" href="catalog.html">Квадрокоптеры</a>
+          </li>
+        </ul>
+      </div>
 
       <!-- Навигация по услугам -->
       <ul class="navigation-services list">
@@ -359,16 +360,7 @@
   <div class="footer-container">
 
     <!-- Логотип -->
-    <img class="logo-footer" src="img/footer-logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
-
-    <!-- Контакты -->
-    <address class="contacts-footer-address">
-      <p class="contacts-footer-text">Санкт-Петербург, набережная<br>
-        реки Карповки, 5, литера П.</p>
-    </address>
-    <address class="contacts-footer-phone">
-      <a class="contacts-footer-text footer-phone" href="tel:88121212">Тел.: +7 (812) 812-12-12</a>
-    </address>
+    <img class="logo-footer" src="img/logo/footer-logo.svg" width="145" height="36" alt='Логотип интернет-магазина "Девайс"'>
 
     <!-- Навигация по услугам -->
     <div class="navigation-footer-container">
@@ -418,6 +410,17 @@
         </li>
       </ul>
     </div>
+
+    <!-- Контакты -->
+    <address class="contacts-footer-address">
+      <p class="contacts-footer-text">Санкт-Петербург, набережная<br>
+        реки Карповки, 5, литера П.</p>
+    </address>
+    <address class="contacts-footer-phone">
+      <a class="contacts-footer-text footer-phone" href="tel:88121212">Тел.: +7 (812) 812-12-12</a>
+    </address>
+
+    <!-- HTML Academy -->
     <a class="htmlacademy-link" href="https://htmlacademy.ru/">
       <span class="visually-hidden">Сайт сделан в "HTML Academy"</span>
       <svg class="htmlacademy-icon" aria-hidden="true" focusable="false" width="115" height="33" fill="none" xmlns="http://www.w3.org/2000/svg">
